@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Profil Saya</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+      <img src="images/logo.png" alt="Logo" 
+           style="height: 40px; width: 40px; object-fit: cover;" class="me-2">
+      Ahmad Zahran
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+
+      <form class="d-flex ms-3">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid about py-6">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-md-5 text-white">
+        <h1 class="display-4 fw-bold mb-3">Iam Ahmad Zahran</h1>
+        <p class="fs-5">
+          Saya adalah mahasiswa biasa yang sedang mencari jati diri kadang bisa berbicara di depan banyak orang
+          kadang juga bisa berbicara sendiri di depan komputer.
+        </p>
+      </div>
+
+      <div class="col-md-7">
+        <div class="row g-3">
+          <div class="col-6">
+            <img src="images/about1.png" class="img-fluid rounded shadow-sm" alt="">
+          </div>
+          <div class="col-6">
+            <img src="images/about2.png" class="img-fluid rounded shadow-sm" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="py-5 ">
+  <div class="container">
+    <h2 class="text-center section-title mb-5">Perjalanan & Skills Saya</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="timeline">
+          <div class="mb-4 p-4 bg-white shadow-sm rounded">
+            <h4 class="fw-bold">Pendidikan</h4>
+            <ul class="mt-2">
+              <li><b>2024 - Sekarang</b> — S1 Informatika</li>
+              <li><b>2021 - 2024</b> MAN 1 Sungai Penuh</li>
+            </ul>
+          </div>
+
+          <div class="mb-4 p-4 bg-white shadow-sm rounded">
+            <h4 class="fw-bold">Pengalaman</h4>
+            <ul class="mt-2">
+              <li>Menjadi mahasiswa informatika seperti biasanya</li>
+              <li>menajamen event kemahasiswaan</li>
+              <li>menjadi mc (master of ceremony) </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="accordion" id="skillsAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="skillOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Programming Languages
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#skillsAccordion">
+              <div class="accordion-body">
+                Java, Python, JavaScript, HTML, CSS
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="skillTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Tools & Framework
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+              <div class="accordion-body">
+                Bootstrap, Eclipse, VS Code, GitHub
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="skillThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Soft Skills
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+              <div class="accordion-body">
+                Problem Solving, Kerja Tim, Komunikasi, Manajemen pikiran, 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="py-4 ocean-footer text-white">
+  <div class="container">
+
+    <div class="row align-items-start text-center text-md-start">
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-1">Ahmad Zahran</h5>
+        <small>Website Portofolio & Informasi Pribadi</small>
+      </div>
+
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Social</h5>
+        <a href="https://www.instagram.com/ahmad_zahran1011/" class="text-white mx-2">Instagram</a>
+        <a href="mailto:zahranahmad91@gmail.com" class="text-white mx-2">Email</a>
+        <a href="kontak.html" class="text-white mx-2">Kontak</a>
+      </div>
+
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="text-uppercase mb-3 fw-bold">Menu</h5>
+        <ul class="list-unstyled footer-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portofolio.html">Portofolio</a></li>
+          <li><a href="kontak.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+    <div class="text-center small mt-2">
+      © <span id="year4"></span> Ahmad Zahran — All Rights Reserved
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

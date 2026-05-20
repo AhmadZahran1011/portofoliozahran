@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Praktikum 7 - Ahmad Zahran</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+  <style>
+    .laporan-hero {
+      background-image: url("images/background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      color: #fff;
+    }
+
+    .laporan-cover {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .laporan-cover h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .laporan-cover h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #d0f0ff;
+    }
+
+    .laporan-cover .badge-info {
+      background: rgba(0,180,216,0.6);
+      border-radius: 30px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .report-body {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 40px 50px;
+    }
+
+    .report-body h3 {
+      color: #013a63;
+      font-weight: 700;
+      border-left: 5px solid #0096c7;
+      padding-left: 14px;
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    .report-body h4 {
+      color: #0077b6;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    .report-body p {
+      color: #1b263b;
+      line-height: 1.85;
+      font-size: 1rem;
+    }
+
+    .step-card {
+      background: #f1faff;
+      border-left: 4px solid #0096c7;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 16px;
+    }
+
+    .step-card h5 {
+      color: #013a63;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .step-card p { margin: 0; font-size: 0.95rem; }
+
+    .code-block {
+      background: #0d1117;
+      color: #c9d1d9;
+      border-radius: 8px;
+      padding: 14px 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.88rem;
+      margin: 10px 0 12px;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    .tujuan-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #e7f5ff;
+    }
+
+    .tujuan-item:last-child { border-bottom: none; }
+
+    .tujuan-icon {
+      background: #0096c7;
+      color: #fff;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .hasil-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #e7f5ff;
+    }
+
+    .hasil-item:last-child { border-bottom: none; }
+
+    .hasil-icon {
+      background: #00b4d8;
+      color: #fff;
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .kesimpulan-box {
+      background: linear-gradient(135deg, #e0f7ff, #b3e9ff);
+      border-radius: 14px;
+      padding: 28px 32px;
+      border-left: 6px solid #0077b6;
+      margin-top: 20px;
+    }
+
+    .kesimpulan-box li {
+      margin-bottom: 10px;
+      line-height: 1.7;
+      color: #1b263b;
+    }
+
+    .laporan-nav-pills .nav-link {
+      color: #013a63;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+    }
+
+    .laporan-nav-pills .nav-link.active {
+      background: #0096c7;
+      color: #fff;
+    }
+
+    .route-table th {
+      background: #013a63;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .route-table td, .route-table th {
+      vertical-align: middle;
+      font-size: 0.9rem;
+    }
+
+    .cmd-table th {
+      background: #0077b6;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .step-img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #d0ebff;
+      margin-top: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .step-img-caption {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #6c757d;
+      margin-top: 6px;
+      margin-bottom: 4px;
+      font-style: italic;
+    }
+
+    .img-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .img-grid-2 figure { margin: 0; }
+
+    .bab-divider {
+      background: linear-gradient(90deg, #013a63, #0096c7);
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 36px 0 20px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .report-body { padding: 24px 20px; }
+      .img-grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
+      <img src="images/logo.png" alt="Logo"
+           style="height: 40px; width: 40px; object-fit: cover;" class="me-2">
+      Ahmad Zahran
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+      <form class="d-flex ms-3">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO COVER ========== -->
+<div class="laporan-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="laporan-cover">
+          <div style="font-size:2.5rem; margin-bottom:8px;">📄</div>
+          <h1>Laporan Praktikum Pemrograman Web</h1>
+          <h2>Migration · Seeding · Routing · Model · Controller · View</h2>
+          <div class="mt-3">
+            <span class="badge-info">Praktikum 7</span>
+          </div>
+          <hr style="border-color: rgba(255,255,255,0.3); margin: 20px 0;">
+          <div class="row text-start g-3 mt-1">
+            <div class="col-sm-6">
+              <small style="opacity:0.75">Disusun Oleh</small>
+              <div class="fw-bold">Ahmad Zahran</div>
+              <div style="opacity:0.85; font-size:0.9rem;">2411532004</div>
+            </div>
+            <div class="col-sm-6">
+              <small style="opacity:0.75">Dosen Pengampu</small>
+              <div class="fw-bold">Nurfiah, S.ST. M.Kom</div>
+              <div style="opacity:0.85; font-size:0.9rem;">Universitas Andalas · 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== KONTEN LAPORAN ========== -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- Nav Pills -->
+        <ul class="nav laporan-nav-pills mb-4 gap-2 flex-wrap">
+          <li class="nav-item"><a class="nav-link active" href="#pendahuluan">Pendahuluan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tujuan">Tujuan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#langkah">Langkah Kerja</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tugas">Tugas CRUD</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hasil">Hasil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kesimpulan">Kesimpulan</a></li>
+        </ul>
+
+        <div class="report-body">
+
+          <!-- ===== PENDAHULUAN ===== -->
+          <div id="pendahuluan">
+            <h3>Pendahuluan</h3>
+            <p>
+              Laravel merupakan framework berbasis PHP yang digunakan untuk mempermudah proses pengembangan
+              aplikasi web. Laravel menyediakan berbagai fitur seperti routing, controller, migration, ORM
+              Eloquent, dan template engine Blade yang membantu developer dalam membangun aplikasi secara
+              lebih terstruktur dan efisien.
+            </p>
+            <p>
+              Pada praktikum ini dilakukan pengelolaan database menggunakan Migration dan Seeder, pembuatan
+              Model dengan Eloquent ORM, Controller dengan resource method, serta View menggunakan Blade
+              Template Engine. Semua ini dirangkai dalam arsitektur MVC (Model View Controller) untuk
+              membangun aplikasi web CRUD yang lengkap.
+            </p>
+            <p>
+              Praktikum ini merupakan kelanjutan dari Praktikum 6 dan bertujuan untuk memahami alur kerja
+              penuh dalam pengembangan aplikasi web berbasis Laravel mulai dari database hingga tampilan antarmuka.
+            </p>
+          </div>
+
+          <!-- ===== TUJUAN ===== -->
+          <div id="tujuan">
+            <h3>Tujuan Praktikum</h3>
+            <div>
+              <div class="tujuan-item">
+                <div class="tujuan-icon">1</div>
+                <p>Memahami struktur dan alur kerja Laravel sebagai framework PHP modern.</p>
+              </div>
+              <div class="tujuan-item">
+                <div class="tujuan-icon">2</div>
+                <p>Mengelola database menggunakan fitur Migration dan Seeding.</p>
+              </div>
+              <div class="tujuan-item">
+                <div class="tujuan-icon">3</div>
+                <p>Membuat dan mengatur Routing aplikasi web.</p>
+              </div>
+              <div class="tujuan-item">
+                <div class="tujuan-icon">4</div>
+                <p>Membangun Model untuk interaksi dengan database menggunakan Eloquent ORM.</p>
+              </div>
+              <div class="tujuan-item">
+                <div class="tujuan-icon">5</div>
+                <p>Membuat tampilan antarmuka menggunakan Blade Template Engine.</p>
+              </div>
+              <div class="tujuan-item">
+                <div class="tujuan-icon">6</div>
+                <p>Mengembangkan Controller sebagai penghubung antara Model dan View.</p>
+              </div>
+              <div class="tujuan-item">
+                <div class="tujuan-icon">7</div>
+                <p>Mengimplementasikan operasi CRUD (Create, Read, Update, Delete) secara lengkap.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== LANGKAH KERJA ===== -->
+          <div id="langkah">
+            <h3>Langkah Kerja Praktikum</h3>
+            <div class="bab-divider">BAB IV — LANGKAH-LANGKAH PRAKTIKUM</div>
+
+            <!-- 4.1 -->
+            <div class="step-card">
+              <h5>4.1 Konfigurasi Database</h5>
+              <p>Buka file <code>.env</code> pada root project Laravel, kemudian ubah konfigurasi database:</p>
+              <div class="code-block">DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=praktikum_laravel
+DB_USERNAME=root
+DB_PASSWORD=</div>
+              <!-- Tambahkan screenshot konfigurasi .env di sini -->
+            </div>
+
+            <!-- 4.2 -->
+            <div class="step-card">
+              <h5>4.2 Membuat Migration</h5>
+              <p>Jalankan perintah berikut untuk membuat file migration tabel products:</p>
+              <div class="code-block">php artisan make:migration create_products_table</div>
+              <p style="margin-top:8px;">Isi file migration dengan struktur tabel berikut:</p>
+              <div class="code-block">Schema::create('products', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->integer('price');
+    $table->text('description');
+    $table->timestamps();
+});</div>
+              <p style="margin-top:8px;">Jalankan migration untuk membuat tabel di database:</p>
+              <div class="code-block">php artisan migrate</div>
+              <!-- Tambahkan screenshot migration di sini -->
+            </div>
+
+            <!-- 4.3 -->
+            <div class="step-card">
+              <h5>4.3 Membuat Seeder</h5>
+              <p>Buat file seeder dengan perintah:</p>
+              <div class="code-block">php artisan make:seeder ProductSeeder</div>
+              <p style="margin-top:8px;">Tambahkan data dummy pada <code>ProductSeeder.php</code>:</p>
+              <div class="code-block">DB::table('products')->insert([
+    ['name' => 'Laptop',  'price' => 7000000, 'description' => 'Laptop untuk pemrograman',
+     'created_at' => now(), 'updated_at' => now()],
+    ['name' => 'Mouse',   'price' => 150000,  'description' => 'Mouse wireless',
+     'created_at' => now(), 'updated_at' => now()],
+]);</div>
+              <p style="margin-top:8px;">Daftarkan seeder pada <code>DatabaseSeeder.php</code> lalu jalankan:</p>
+              <div class="code-block">$this->call(ProductSeeder::class);
+
+php artisan db:seed</div>
+              <!-- Tambahkan screenshot seeder di sini -->
+            </div>
+
+            <!-- 4.4 -->
+            <div class="step-card">
+              <h5>4.4 Membuat Model</h5>
+              <p>Buka atau buat file <code>app/Models/Product.php</code> dan tambahkan <code>$fillable</code>:</p>
+              <div class="code-block">class Product extends Model {
+    use HasFactory;
+    protected $fillable = ['name', 'price', 'description'];
+}</div>
+              <!-- Tambahkan screenshot model di sini -->
+            </div>
+
+            <!-- 4.5 -->
+            <div class="step-card">
+              <h5>4.5 Membuat Controller</h5>
+              <p>Buat resource controller menggunakan perintah artisan:</p>
+              <div class="code-block">php artisan make:controller ProductController --resource</div>
+              <p style="margin-top:8px;">Isi method <code>index()</code> untuk menampilkan data produk:</p>
+              <div class="code-block">use App\Models\Product;
+
+public function index() {
+    $products = Product::all();
+    return view('products', compact('products'));
+}</div>
+              <!-- Tambahkan screenshot controller di sini -->
+            </div>
+
+            <!-- 4.6 -->
+            <div class="step-card">
+              <h5>4.6 Mengatur Routing</h5>
+              <p>Tambahkan route resource pada file <code>routes/web.php</code>:</p>
+              <div class="code-block">use App\Http\Controllers\ProductController;
+
+Route::resource('products', ProductController::class);</div>
+              <p style="margin-top:10px;">Route resource mendaftarkan 7 endpoint secara otomatis:</p>
+
+              <div class="table-responsive mt-3">
+                <table class="table table-bordered route-table">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Fungsi</th>
+                      <th>URL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>index</code></td><td>Menampilkan semua data</td><td>GET /products</td></tr>
+                    <tr><td><code>create</code></td><td>Form tambah data</td><td>GET /products/create</td></tr>
+                    <tr><td><code>store</code></td><td>Menyimpan data baru</td><td>POST /products</td></tr>
+                    <tr><td><code>show</code></td><td>Menampilkan detail data</td><td>GET /products/{id}</td></tr>
+                    <tr><td><code>edit</code></td><td>Form edit data</td><td>GET /products/{id}/edit</td></tr>
+                    <tr><td><code>update</code></td><td>Mengubah data</td><td>PUT /products/{id}</td></tr>
+                    <tr><td><code>destroy</code></td><td>Menghapus data</td><td>DELETE /products/{id}</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Tambahkan screenshot routing di sini -->
+            </div>
+
+            <!-- 4.7 -->
+            <div class="step-card">
+              <h5>4.7 Membuat View</h5>
+              <p>Buat file layout utama di <code>resources/views/layouts/app.blade.php</code>:</p>
+              <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;@yield('title')&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Aplikasi Laravel&lt;/h1&gt;
+    @yield('content')
+&lt;/body&gt;&lt;/html&gt;</div>
+              <p style="margin-top:8px;">Buat view daftar produk di <code>resources/views/products.blade.php</code>:</p>
+              <div class="code-block">@extends('layouts.app')
+@section('title', 'Products')
+@section('content')
+    &lt;ul&gt;
+        @foreach ($products as $product)
+            &lt;li&gt;{{ $product->name }}&lt;/li&gt;
+        @endforeach
+    &lt;/ul&gt;
+@endsection</div>
+              <!-- Tambahkan screenshot view di sini -->
+            </div>
+          </div>
+
+          <!-- ===== TUGAS CRUD ===== -->
+          <div id="tugas">
+            <h3>Tugas: CRUD Data Mahasiswa</h3>
+            <div class="bab-divider">BAB V — IMPLEMENTASI CRUD MAHASISWA</div>
+            <p>Pada bagian tugas, dibuat aplikasi CRUD lengkap untuk mengelola data mahasiswa.</p>
+
+            <!-- 5.1 -->
+            <div class="step-card">
+              <h5>5.1 Migration Tabel Mahasiswa</h5>
+              <p>Tabel <code>mahasiswas</code> dibuat dengan kolom: id, nim, nama, email, jurusan, angkatan, dan timestamps.</p>
+              <div class="code-block">Schema::create('mahasiswas', function (Blueprint $table) {
+    $table->id();
+    $table->string('nim')->unique();
+    $table->string('nama');
+    $table->string('email')->unique();
+    $table->string('jurusan');
+    $table->integer('angkatan');
+    $table->timestamps();
+});</div>
+              <!-- Tambahkan screenshot migration mahasiswa di sini -->
+            </div>
+
+            <!-- 5.2 -->
+            <div class="step-card">
+              <h5>5.2 Seeder Data Mahasiswa</h5>
+              <p><code>MahasiswaSeeder</code> mengisi 5 data dummy mahasiswa dari berbagai jurusan dan angkatan untuk keperluan pengujian.</p>
+              <div class="code-block">DB::table('mahasiswas')->insert([
+    ['nim' => '2021001', 'nama' => 'Andi Pratama',
+     'email' => 'andi@example.com', 'jurusan' => 'Teknik Informatika',
+     'angkatan' => 2021, 'created_at' => now(), 'updated_at' => now()],
+    // ... data lainnya
+]);</div>
+              <!-- Tambahkan screenshot seeder mahasiswa di sini -->
+            </div>
+
+            <!-- 5.3 -->
+            <div class="step-card">
+              <h5>5.3 Model Mahasiswa</h5>
+              <p>Model <code>Mahasiswa</code> dibuat di <code>app/Models/Mahasiswa.php</code> dengan <code>$fillable</code> berisi kolom yang dapat diisi secara massal.</p>
+              <div class="code-block">class Mahasiswa extends Model {
+    use HasFactory;
+    protected $fillable = ['nim','nama','email','jurusan','angkatan'];
+}</div>
+              <!-- Tambahkan screenshot model mahasiswa di sini -->
+            </div>
+
+            <!-- 5.4 -->
+            <div class="step-card">
+              <h5>5.4 Route Mahasiswa</h5>
+              <p>Route resource didaftarkan di <code>routes/web.php</code> sehingga semua endpoint CRUD tersedia otomatis.</p>
+              <div class="code-block">use App\Http\Controllers\MahasiswaController;
+
+Route::get('/', fn() => redirect()->route('mahasiswa.index'));
+Route::resource('mahasiswa', MahasiswaController::class);</div>
+              <!-- Tambahkan screenshot route mahasiswa di sini -->
+            </div>
+
+            <!-- 5.5 -->
+            <div class="step-card">
+              <h5>5.5 MahasiswaController</h5>
+              <p>Controller dibuat dengan <code>--resource</code> dan berisi 7 method lengkap beserta validasi input:</p>
+              <div class="code-block">public function store(Request $request) {
+    $request->validate([
+        'nim'      => 'required|unique:mahasiswas,nim',
+        'nama'     => 'required|string|max:100',
+        'email'    => 'required|email|unique:mahasiswas,email',
+        'jurusan'  => 'required|string|max:100',
+        'angkatan' => 'required|integer|min:2000|max:2099',
+    ]);
+    Mahasiswa::create($request->all());
+    return redirect()->route('mahasiswa.index')
+                     ->with('success', 'Data berhasil ditambahkan!');
+}</div>
+              <!-- Tambahkan screenshot controller mahasiswa di sini -->
+            </div>
+
+            <!-- 5.6 -->
+            <div class="step-card">
+              <h5>5.6 View Blade</h5>
+              <p>View terdiri dari 5 file Blade yang menggunakan layout bersama:</p>
+              <ul style="margin-top:8px; padding-left:20px; color:#1b263b; line-height:2;">
+                <li><code>layouts/app.blade.php</code> — Template utama (navbar, alert, struktur HTML)</li>
+                <li><code>mahasiswa/index.blade.php</code> — Tabel daftar mahasiswa dengan tombol aksi</li>
+                <li><code>mahasiswa/create.blade.php</code> — Form tambah mahasiswa dengan validasi</li>
+                <li><code>mahasiswa/edit.blade.php</code> — Form edit dengan data yang sudah terisi</li>
+                <li><code>mahasiswa/show.blade.php</code> — Halaman detail satu data mahasiswa</li>
+              </ul>
+              <!-- Tambahkan screenshot view blade di sini -->
+            </div>
+          </div>
+
+          <!-- ===== HASIL ===== -->
+          <div id="hasil">
+            <h3>Hasil Praktikum</h3>
+            <div class="bab-divider">BAB VI — HASIL PRAKTIKUM</div>
+            <p>Setelah menjalankan seluruh langkah praktikum, aplikasi CRUD data mahasiswa berhasil dibangun dengan fitur-fitur berikut:</p>
+
+            <div>
+              <div class="hasil-item">
+                <div class="hasil-icon">📋</div>
+                <div><strong>Halaman Index</strong> — Menampilkan seluruh data mahasiswa dalam bentuk tabel dengan tombol Detail, Edit, dan Hapus.</div>
+              </div>
+              <div class="hasil-item">
+                <div class="hasil-icon">➕</div>
+                <div><strong>Halaman Create</strong> — Form tambah data mahasiswa baru dilengkapi validasi input dan pesan error.</div>
+              </div>
+              <div class="hasil-item">
+                <div class="hasil-icon">✏️</div>
+                <div><strong>Halaman Edit</strong> — Form ubah data dengan nilai field yang sudah terisi otomatis.</div>
+              </div>
+              <div class="hasil-item">
+                <div class="hasil-icon">🔍</div>
+                <div><strong>Halaman Show</strong> — Halaman detail menampilkan seluruh informasi satu mahasiswa.</div>
+              </div>
+              <div class="hasil-item">
+                <div class="hasil-icon">🗑️</div>
+                <div><strong>Fitur Delete</strong> — Menghapus data dengan konfirmasi popup sebelum dihapus.</div>
+              </div>
+              <div class="hasil-item">
+                <div class="hasil-icon">✅</div>
+                <div><strong>Notifikasi</strong> — Pesan sukses muncul setelah setiap operasi CRUD berhasil.</div>
+              </div>
+            </div>
+
+            <!-- Tambahkan screenshot hasil (tampilan browser) di sini -->
+
+            <h4 class="mt-4">Perintah yang Dijalankan</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered cmd-table">
+                <thead>
+                  <tr>
+                    <th>Kategori</th>
+                    <th>Perintah</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Migration</td><td><code>php artisan make:migration create_mahasiswas_table</code></td></tr>
+                  <tr><td>Seeder</td><td><code>php artisan make:seeder MahasiswaSeeder</code></td></tr>
+                  <tr><td>Model</td><td><code>php artisan make:model Mahasiswa</code></td></tr>
+                  <tr><td>Controller</td><td><code>php artisan make:controller MahasiswaController --resource</code></td></tr>
+                  <tr><td>Run Migration + Seed</td><td><code>php artisan migrate:fresh --seed</code></td></tr>
+                  <tr><td>Cek Route</td><td><code>php artisan route:list</code></td></tr>
+                  <tr><td>Jalankan Server</td><td><code>php artisan serve</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- ===== KESIMPULAN ===== -->
+          <div id="kesimpulan">
+            <h3>Kesimpulan</h3>
+            <div class="bab-divider">BAB VII — KESIMPULAN</div>
+            <div class="kesimpulan-box">
+              <ul style="padding-left:20px; margin:0;">
+                <li>Laravel menyediakan struktur MVC yang memisahkan logika data (Model), tampilan (View), dan kontrol (Controller) sehingga kode lebih terorganisir dan mudah dikembangkan.</li>
+                <li>Migration memudahkan pengelolaan struktur database menggunakan kode PHP sehingga perubahan dapat dilacak dan di-rollback kapan saja.</li>
+                <li>Seeding sangat berguna untuk mengisi data awal atau data dummy saat pengembangan dan pengujian aplikasi.</li>
+                <li>Resource Controller dan Resource Route menyederhanakan pembuatan endpoint CRUD karena hanya memerlukan satu perintah artisan untuk menghasilkan 7 method dan 7 route secara otomatis.</li>
+                <li>Blade Template Engine memudahkan pembuatan tampilan dinamis dengan sintaks yang bersih, mendukung layout bersama, dan menghindari pengulangan kode HTML.</li>
+                <li>Eloquent ORM memungkinkan interaksi database dengan cara yang intuitif menggunakan sintaks PHP berorientasi objek tanpa perlu menulis query SQL secara manual.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /report-body -->
+
+        <!-- Back button -->
+        <div class="text-center mt-4">
+          <a href="portofolio.html" class="btn btn-outline-primary px-4 py-2 rounded-pill">
+            ← Kembali ke Portofolio
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="py-4 ocean-footer text-white">
+  <div class="container">
+    <div class="row align-items-start text-center text-md-start">
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-1">Ahmad Zahran</h5>
+        <small>Website Portofolio & Informasi Pribadi</small>
+      </div>
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Social</h5>
+        <a href="https://www.instagram.com/ahmad_zahran1011/" class="text-white mx-2">Instagram</a>
+        <a href="mailto:zahranahmad91@gmail.com" class="text-white mx-2">Email</a>
+        <a href="kontak.html" class="text-white mx-2">Kontak</a>
+      </div>
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="text-uppercase mb-3 fw-bold">Menu</h5>
+        <ul class="list-unstyled footer-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portofolio.html">Portofolio</a></li>
+          <li><a href="kontak.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center small mt-2">
+      © <span id="year4"></span> Ahmad Zahran — All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("year4").textContent = new Date().getFullYear();
+
+  // Smooth scroll + active pill
+  document.querySelectorAll('.laporan-nav-pills .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelectorAll('.laporan-nav-pills .nav-link').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  const sections = document.querySelectorAll('#pendahuluan,#tujuan,#langkah,#tugas,#hasil,#kesimpulan');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    document.querySelectorAll('.laporan-nav-pills .nav-link').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

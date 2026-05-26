@@ -47,7 +47,7 @@ body {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-link {
@@ -110,7 +110,7 @@ body {
   border: none;
   overflow: hidden;
   background: #ffffff;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: 0.35s ease;
 }
 
@@ -122,7 +122,7 @@ body {
 
 .card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
 }
 
 .card:hover .card-img-top {
@@ -157,7 +157,7 @@ body {
 .timeline-item:hover {
   left: 10px;
   background: #d0ebff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item h5 {
@@ -169,8 +169,6 @@ body {
   font-size: 14px;
   color: #495057;
 }
-
-
 
 /* =========================================================
    ACCORDION (Fresh Blue Style)

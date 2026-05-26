@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Profil Saya</title>
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="custom.css" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- ========== NAVBAR ========== -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
-      <img src="images/logo.png" alt="Logo" 
+      <img src="images/logo.png" alt="Logo"
            style="height: 40px; width: 40px; object-fit: cover;" class="me-2">
       Ahmad Zahran
     </a>
@@ -24,8 +25,8 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
         <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
       </ul>
@@ -38,14 +39,15 @@
   </div>
 </nav>
 
+<!-- ========== HERO ABOUT ========== -->
 <div class="container-fluid about py-6">
   <div class="container">
     <div class="row align-items-center">
 
       <div class="col-md-5 text-white">
-        <h1 class="display-4 fw-bold mb-3">Iam Ahmad Zahran</h1>
+        <h1 class="display-4 fw-bold mb-3">I am Ahmad Zahran</h1>
         <p class="fs-5">
-          Saya adalah mahasiswa biasa yang sedang mencari jati diri kadang bisa berbicara di depan banyak orang
+          Saya adalah mahasiswa biasa yang sedang mencari jati diri, kadang bisa berbicara di depan banyak orang,
           kadang juga bisa berbicara sendiri di depan komputer.
         </p>
       </div>
@@ -53,10 +55,10 @@
       <div class="col-md-7">
         <div class="row g-3">
           <div class="col-6">
-            <img src="images/about1.png" class="img-fluid rounded shadow-sm" alt="">
+            <img src="images/about1.png" class="img-fluid rounded shadow-sm" alt="About 1">
           </div>
           <div class="col-6">
-            <img src="images/about2.png" class="img-fluid rounded shadow-sm" alt="">
+            <img src="images/about2.png" class="img-fluid rounded shadow-sm" alt="About 2">
           </div>
         </div>
       </div>
@@ -65,18 +67,22 @@
   </div>
 </div>
 
-<section class="py-5 ">
+<!-- ========== PERJALANAN & SKILLS ========== -->
+<section class="py-5">
   <div class="container">
     <h2 class="text-center section-title mb-5">Perjalanan & Skills Saya</h2>
 
     <div class="row g-4">
+
+      <!-- Timeline -->
       <div class="col-md-6">
         <div class="timeline">
+
           <div class="mb-4 p-4 bg-white shadow-sm rounded">
             <h4 class="fw-bold">Pendidikan</h4>
             <ul class="mt-2">
               <li><b>2024 - Sekarang</b> — S1 Informatika</li>
-              <li><b>2021 - 2024</b> MAN 1 Sungai Penuh</li>
+              <li><b>2021 - 2024</b> — MAN 1 Sungai Penuh</li>
             </ul>
           </div>
 
@@ -84,14 +90,15 @@
             <h4 class="fw-bold">Pengalaman</h4>
             <ul class="mt-2">
               <li>Menjadi mahasiswa informatika seperti biasanya</li>
-              <li>menajamen event kemahasiswaan</li>
-              <li>menjadi mc (master of ceremony) </li>
+              <li>Manajemen event kemahasiswaan</li>
+              <li>Menjadi MC (Master of Ceremony)</li>
             </ul>
           </div>
 
         </div>
       </div>
 
+      <!-- Accordion Skills -->
       <div class="col-md-6">
         <div class="accordion" id="skillsAccordion">
 
@@ -129,17 +136,19 @@
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
               <div class="accordion-body">
-                Problem Solving, Kerja Tim, Komunikasi, Manajemen pikiran, 
+                Problem Solving, Kerja Tim, Komunikasi, Manajemen Pikiran
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-
+<!-- ========== FOOTER ========== -->
 <footer class="py-4 ocean-footer text-white">
   <div class="container">
 
@@ -165,7 +174,6 @@
           <li><a href="kontak.html">Contact</a></li>
         </ul>
       </div>
-
     </div>
 
     <hr class="border-light">
@@ -176,7 +184,9 @@
   </div>
 </footer>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('year4').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

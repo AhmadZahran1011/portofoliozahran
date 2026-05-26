@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Portofolio - Ahmad Zahran</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="custom.css" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- ========== NAVBAR ========== -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
@@ -22,12 +24,11 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portofolio.html">Portofolio</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
         </ul>
-
         <form class="d-flex ms-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
@@ -36,10 +37,11 @@
     </div>
   </nav>
 
+  <!-- ========== HERO PORTOFOLIO ========== -->
   <div class="container-fluid portofolio pb-5">
-
     <h1 class="display-3 fw-bold mb-4 text-center">Portofolio</h1>
 
+    <!-- Filter Buttons -->
     <div class="container text-center my-4">
       <button class="btn btn-outline-primary mx-2 filter-btn active" data-filter="all">All</button>
       <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="web">Website</button>
@@ -47,12 +49,13 @@
       <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="mobile">Mobile</button>
     </div>
 
+    <!-- Portfolio Grid -->
     <div class="container mt-4">
       <div class="row" id="portfolioGrid">
 
         <div class="col-md-4 mb-4 portfolio-item" data-category="java">
           <div class="card h-100 portfolio-card" data-bs-toggle="modal" data-bs-target="#modal1">
-            <img src="images/porto1.png" class="card-img-top">
+            <img src="images/porto1.png" class="card-img-top" alt="LaundryApp">
             <div class="card-body">
               <h5 class="card-title">LaundryApp</h5>
               <span class="badge bg-primary category-badge">Java</span>
@@ -63,18 +66,18 @@
 
         <div class="col-md-4 mb-4 portfolio-item" data-category="web">
           <div class="card h-100 portfolio-card" data-bs-toggle="modal" data-bs-target="#modal2">
-            <img src="images/porto2.png" class="card-img-top">
+            <img src="images/porto2.png" class="card-img-top" alt="AppBelajar">
             <div class="card-body">
               <h5 class="card-title">AppBelajar</h5>
               <span class="badge bg-success category-badge">Website</span>
-              <p class="card-text mt-2">Platform web modul pembelajaran .</p>
+              <p class="card-text mt-2">Platform web modul pembelajaran.</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-4 portfolio-item" data-category="java">
           <div class="card h-100 portfolio-card" data-bs-toggle="modal" data-bs-target="#modal3">
-            <img src="images/porto3.png" class="card-img-top">
+            <img src="images/porto3.png" class="card-img-top" alt="GUI Sederhana">
             <div class="card-body">
               <h5 class="card-title">GUI Sederhana</h5>
               <span class="badge bg-primary category-badge">Java</span>
@@ -85,9 +88,9 @@
 
         <div class="col-md-4 mb-4 portfolio-item" data-category="mobile">
           <div class="card h-100 portfolio-card" data-bs-toggle="modal" data-bs-target="#modal4">
-            <img src="images/porto4.png" class="card-img-top">
+            <img src="images/porto4.png" class="card-img-top" alt="Pengumuman Kelulusan">
             <div class="card-body">
-              <h5 class="card-title">pengumuman kelulusan</h5>
+              <h5 class="card-title">Pengumuman Kelulusan</h5>
               <span class="badge bg-warning category-badge">Mobile</span>
               <p class="card-text mt-2">Aplikasi pengumuman kelulusan sederhana untuk platform mobile.</p>
             </div>
@@ -96,7 +99,7 @@
 
         <div class="col-md-4 mb-4 portfolio-item" data-category="web">
           <div class="card h-100 portfolio-card" data-bs-toggle="modal" data-bs-target="#modal5">
-            <img src="images/porto5.png" class="card-img-top">
+            <img src="images/porto5.png" class="card-img-top" alt="Web Portfolio">
             <div class="card-body">
               <h5 class="card-title">Web Portfolio</h5>
               <span class="badge bg-success category-badge">Website</span>
@@ -107,39 +110,39 @@
 
         <div class="col-md-4 mb-4 portfolio-item" data-category="java">
           <div class="card h-100 portfolio-card" data-bs-toggle="modal" data-bs-target="#modal6">
-            <img src="images/porto6.png" class="card-img-top">
+            <img src="images/porto6.png" class="card-img-top" alt="Kalkulator Sederhana">
             <div class="card-body">
               <h5 class="card-title">Kalkulator Sederhana</h5>
               <span class="badge bg-primary category-badge">Java</span>
-              <p class="card-text mt-2">Kalkulator Aritmatika sederhana menggunakan GUI.p>
+              <p class="card-text mt-2">Kalkulator aritmatika sederhana menggunakan GUI.</p>
             </div>
           </div>
         </div>
 
       </div>
     </div>
-  </div>
+  </div><!-- /container-fluid portofolio -->
 
-  <div class="modal fade" id="modal1">
+
+  <!-- ========== MODALS ========== -->
+
+  <div class="modal fade" id="modal1" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>LaundryApp</h5>
+          <h5 class="modal-title">LaundryApp</h5>
           <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-
         <div class="modal-body">
           <div id="carousel1" class="carousel slide mb-3">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images/porto1.png" class="d-block w-100">
+                <img src="images/porto1.png" class="d-block w-100" alt="LaundryApp">
               </div>
             </div>
           </div>
-
           <p>Aplikasi laundry berbasis Java Swing dengan fitur transaksi dan laporan otomatis.</p>
-
-          <a href="https://github.com/AhmadZahran1011/2411532004_Project_Kelas_A" class="btn btn-primary">
+          <a href="https://github.com/AhmadZahran1011/2411532004_Project_Kelas_A" class="btn btn-primary" target="_blank">
             Lihat di Github
           </a>
         </div>
@@ -147,98 +150,92 @@
     </div>
   </div>
 
-  <div class="modal fade" id="modal2">
+  <div class="modal fade" id="modal2" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>AppBelajar</h5>
+          <h5 class="modal-title">AppBelajar</h5>
           <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-
         <div class="modal-body">
           <div id="carousel2" class="carousel slide mb-3">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images/porto2.png" class="d-block w-100">
+                <img src="images/porto2.png" class="d-block w-100" alt="AppBelajar">
               </div>
             </div>
           </div>
-
           <p>Website pembelajaran interaktif menggunakan PWA.</p>
-
-          <a href="https://github.com/AhmadZahran1011/AppBelajar" class="btn btn-primary">Lihat di Github</a>
+          <a href="https://github.com/AhmadZahran1011/AppBelajar" class="btn btn-primary" target="_blank">
+            Lihat di Github
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="modal3">
+  <div class="modal fade" id="modal3" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>GUI Sederhana</h5>
+          <h5 class="modal-title">GUI Sederhana</h5>
           <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-
         <div class="modal-body">
-          <img src="images/porto3.png" class="img-fluid mb-3">
+          <img src="images/porto3.png" class="img-fluid mb-3" alt="GUI Sederhana">
           <p>Proyek latihan GUI menggunakan Java Swing.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="modal4">
+  <div class="modal fade" id="modal4" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>Aplikasi pengumuman kelulusan</h5>
+          <h5 class="modal-title">Pengumuman Kelulusan</h5>
           <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-
         <div class="modal-body">
-          <img src="images/porto4.png" class="img-fluid mb-3">
+          <img src="images/porto4.png" class="img-fluid mb-3" alt="Pengumuman Kelulusan">
           <p>Aplikasi pengumuman kelulusan sederhana untuk platform mobile.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="modal5">
+  <div class="modal fade" id="modal5" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>Web Portfolio</h5>
+          <h5 class="modal-title">Web Portfolio</h5>
           <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-
         <div class="modal-body">
-          <img src="images/porto5.png" class="img-fluid mb-3">
+          <img src="images/porto5.png" class="img-fluid mb-3" alt="Web Portfolio">
           <p>Website portofolio dengan desain modern dan responsif.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="modal6">
+  <div class="modal fade" id="modal6" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>Kalkulator Sederhana</h5>
+          <h5 class="modal-title">Kalkulator Sederhana</h5>
           <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-
         <div class="modal-body">
-          <img src="images/porto6.png" class="img-fluid mb-3">
-          <p>Kalkulator Aritmatika sederhana menggunakan GUI.</p>
+          <img src="images/porto6.png" class="img-fluid mb-3" alt="Kalkulator Sederhana">
+          <p>Kalkulator aritmatika sederhana menggunakan GUI.</p>
         </div>
       </div>
     </div>
   </div>
 
-  </div><!-- /container-fluid portofolio -->
 
-  <!-- ========== LAPORAN PRAKTIKUM SECTION ========== -->
+  <!-- ========== LAPORAN PRAKTIKUM ========== -->
   <section class="py-5">
     <div class="container">
       <h2 class="section-title fw-bold mb-1 text-center">Laporan Praktikum</h2>
@@ -261,12 +258,10 @@
               </div>
               <h5 class="card-title fw-bold">Instalasi Laravel</h5>
               <p class="card-text text-muted" style="font-size:0.9rem;">
-                Laporan praktikum instalasi dan konfigurasi Laravel menggunakan Composer,
-                pembuatan Controller, View Blade, dan Routing dasar MVC.
+                Instalasi dan konfigurasi Laravel menggunakan Composer, pembuatan
+                Controller, View Blade, dan Routing dasar MVC.
               </p>
-              <a href="laporan.html" class="btn btn-primary w-100 mt-2 rounded-3">
-                Lihat Laporan →
-              </a>
+              <a href="laporan.html" class="btn btn-primary w-100 mt-2 rounded-3">Lihat Laporan →</a>
             </div>
           </div>
         </div>
@@ -286,12 +281,10 @@
               </div>
               <h5 class="card-title fw-bold">Migration, Seeding & CRUD</h5>
               <p class="card-text text-muted" style="font-size:0.9rem;">
-                Laporan praktikum pengelolaan database dengan Migration & Seeder,
-                implementasi Model, Controller Resource, dan CRUD data mahasiswa.
+                Pengelolaan database dengan Migration & Seeder, implementasi Model,
+                Controller Resource, dan CRUD data mahasiswa.
               </p>
-              <a href="laporan7.html" class="btn btn-primary w-100 mt-2 rounded-3">
-                Lihat Laporan →
-              </a>
+              <a href="laporan7.html" class="btn btn-primary w-100 mt-2 rounded-3">Lihat Laporan →</a>
             </div>
           </div>
         </div>
@@ -311,12 +304,10 @@
               </div>
               <h5 class="card-title fw-bold">Eloquent Relationship</h5>
               <p class="card-text text-muted" style="font-size:0.9rem;">
-                Laporan implementasi relasi One-to-Many dan Many-to-Many pada sistem
-                akademik Laravel: Student, Major, dan Subject dengan Eager Loading.
+                Implementasi relasi One-to-Many dan Many-to-Many pada sistem akademik
+                Laravel: Student, Major, dan Subject dengan Eager Loading.
               </p>
-              <a href="laporan8.html" class="btn btn-primary w-100 mt-2 rounded-3">
-                Lihat Laporan →
-              </a>
+              <a href="laporan8.html" class="btn btn-primary w-100 mt-2 rounded-3">Lihat Laporan →</a>
             </div>
           </div>
         </div>
@@ -325,71 +316,66 @@
     </div>
   </section>
 
-  <br>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="py-4 ocean-footer text-white">
-  <div class="container">
+    <div class="container">
+      <div class="row align-items-start text-center text-md-start">
 
-    <div class="row align-items-start text-center text-md-start">
-      <div class="col-md-4 mb-4 text-center">
-        <h5 class="fw-bold mb-1">Ahmad Zahran</h5>
-        <small>Website Portofolio & Informasi Pribadi</small>
+        <div class="col-md-4 mb-4 text-center">
+          <h5 class="fw-bold mb-1">Ahmad Zahran</h5>
+          <small>Website Portofolio & Informasi Pribadi</small>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center">
+          <h5 class="fw-bold mb-3">Social</h5>
+          <a href="https://www.instagram.com/ahmad_zahran1011/" class="text-white mx-2">Instagram</a>
+          <a href="mailto:zahranahmad91@gmail.com" class="text-white mx-2">Email</a>
+          <a href="kontak.html" class="text-white mx-2">Kontak</a>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center">
+          <h5 class="text-uppercase mb-3 fw-bold">Menu</h5>
+          <ul class="list-unstyled footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portofolio.html">Portofolio</a></li>
+            <li><a href="kontak.html">Contact</a></li>
+          </ul>
+        </div>
+
       </div>
-
-      <div class="col-md-4 mb-4 text-center">
-        <h5 class="fw-bold mb-3">Social</h5>
-        <a href="https://www.instagram.com/ahmad_zahran1011/" class="text-white mx-2">Instagram</a>
-        <a href="mailto:zahranahmad91@gmail.com" class="text-white mx-2">Email</a>
-        <a href="kontak.html" class="text-white mx-2">Kontak</a>
+      <hr class="border-light">
+      <div class="text-center small mt-2">
+        © <span id="year4"></span> Ahmad Zahran — All Rights Reserved
       </div>
-
-      <div class="col-md-4 mb-4 text-center">
-        <h5 class="text-uppercase mb-3 fw-bold">Menu</h5>
-        <ul class="list-unstyled footer-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portofolio.html">Portofolio</a></li>
-          <li><a href="kontak.html">Contact</a></li>
-        </ul>
-      </div>
-
     </div>
+  </footer>
 
-    <hr class="border-light">
-
-    <div class="text-center small mt-2">
-      © <span id="year4"></span> Ahmad Zahran — All Rights Reserved
-    </div>
-
-  </div>
-</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
   <script>
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const portfolioItems = document.querySelectorAll(".portfolio-item");
+    // Tahun otomatis
+    document.getElementById("year4").textContent = new Date().getFullYear();
 
-  filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      // Hapus kelas active dari semua tombol
-      filterButtons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
+    // Filter portofolio
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
 
-      const filter = button.getAttribute("data-filter");
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
 
-      portfolioItems.forEach(item => {
-        const category = item.getAttribute("data-category");
+        const filter = button.getAttribute("data-filter");
 
-        if (filter === "all" || category === filter) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
+        portfolioItems.forEach(item => {
+          const category = item.getAttribute("data-category");
+          item.style.display = (filter === "all" || category === filter) ? "block" : "none";
+        });
       });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
